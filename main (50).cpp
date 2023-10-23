@@ -11,12 +11,14 @@ int maxof(int a, int b){
 }
 
 int maxof8(int data[9]){
-    int temp;
+    int temp,max;
     for(int i = 0; i < 7; i++){
         temp = maxof(data[i], data[i+1]);
-        
+        if(temp > max){
+            max = temp;
+        }
     }
-    return temp;
+    return max;
 }
 
 int main(){
